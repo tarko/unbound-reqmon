@@ -202,6 +202,6 @@ Thread.new do
 	QueueMonitor.new.run
 end
 
-DRb.start_service("druby://0.0.0.0:3000", RemoteListener.new, {:safe_level => 1})
+DRb.start_service("druby://0.0.0.0:3000", RemoteListener.new)
 DRb.thread.join
 
